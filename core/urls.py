@@ -7,7 +7,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
 
-    # path('jet/', include('jet.urls', 'jet')),
+    path('jet/', include('jet.urls', 'jet')),
     # path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),
 
 

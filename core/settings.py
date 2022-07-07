@@ -26,14 +26,14 @@ SECRET_KEY = 'django-insecure-hdwmbb975yszo#03*hc+o0=1_z=2b#9tv^8nue6b*c&(7l(0tn
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', "https://carvanadmin.herokuapp.com", "http://carvanadmin.herokuapp.com", "carvanadmin.herokuapp.com'"]
+ALLOWED_HOSTS = ['*']
 CSRF_TRUSTED_ORIGINS = ['http://localhost:8000', "https://carvanadmin.herokuapp.com", "http://carvanadmin.herokuapp.com"]
 
 # Application definition
 
 INSTALLED_APPS = [
     # For admin panel dashboard design app
-    # 'jet',
+    'jet',
     # 'jet.dashboard',
 
     # django built-in apps
@@ -200,37 +200,37 @@ if ENVIRONMENT == "production":
 
 
 # JET Configuration
-# JET_SIDE_MENU_COMPACT = True
+JET_SIDE_MENU_COMPACT = True
 
-# JET_THEMES = [
-#     {
-#         'theme': 'default', # theme folder name
-#         'color': '#47bac1', # color of the theme's button in user menu
-#         'title': 'Default' # theme title
-#     },
-#     {
-#         'theme': 'green',
-#         'color': '#44b78b',
-#         'title': 'Green'
-#     },
-#     {
-#         'theme': 'light-green',
-#         'color': '#2faa60',
-#         'title': 'Light Green'
-#     },
-#     {
-#         'theme': 'light-violet',
-#         'color': '#a464c4',
-#         'title': 'Light Violet'
-#     },
-#     {
-#         'theme': 'light-blue',
-#         'color': '#5EADDE',
-#         'title': 'Light Blue'
-#     },
-#     {
-#         'theme': 'light-gray',
-#         'color': '#222',
-#         'title': 'Light Gray'
-#     }
-# ]
+JET_THEMES = [
+    {
+        'theme': 'default', # theme folder name
+        'color': '#47bac1', # color of the theme's button in user menu
+        'title': 'Default' # theme title
+    },
+    {
+        'theme': 'green',
+        'color': '#44b78b',
+        'title': 'Green'
+    },
+    {
+        'theme': 'light-green',
+        'color': '#2faa60',
+        'title': 'Light Green'
+    },
+    {
+        'theme': 'light-violet',
+        'color': '#a464c4',
+        'title': 'Light Violet'
+    },
+    {
+        'theme': 'light-blue',
+        'color': '#5EADDE',
+        'title': 'Light Blue'
+    },
+    {
+        'theme': 'light-gray',
+        'color': '#222',
+        'title': 'Light Gray'
+    }
+]
