@@ -1,0 +1,39 @@
+{% extends 'layouts/base.html' %}
+{% block title %}
+    Dashboard
+{% endblock title %}
+{% block css %}
+    <style>
+        .todo-div{
+            width: 70%;
+            text-align: center;
+            margin-top: 100px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-left: 100px;
+        }
+    </style>
+{% endblock css %}
+{% block content %}
+<div class="container">
+    <div class="todo-div">
+        <input type="text" class="form-control" name="data" id="" placeholder="Enter Your Todo">
+        <span class="input-group-text">
+            <i class="bi bi-calendar-plus-fill"></i>
+        </span>
+        <div class="row">
+            <div class="col">
+                Column
+            </div>
+            <div class="col">
+                Column
+            </div>
+            <div class="col">
+                Column
+            </div>
+        </div>
+    </div>
+  </div>
+{% endblock content %}
+{% block js %}
+{% endblock js %}

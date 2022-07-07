@@ -1,0 +1,71 @@
+{% extends 'layouts/base.html' %}
+{% block title %}
+    Cleaner - Dashboard
+{% endblock title %}
+{% block css %}
+    <style>
+        .main-div{
+            width: 70%;
+            text-align: center;
+            margin-top: 100px;
+        }
+    </style>
+{% endblock css %}
+{% block content %}
+<div class="container">
+    <div class="main-div">
+        <!-- creating table -->
+        <table class="table table-striped" style="overflow-y: scroll;">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Added</th>
+                    <th>Type</th>
+                    <th>Model</th>
+                    <th>Ev Number</th>
+                    <th>Programme</th>
+                    <th>Company</th>
+                    <th>Cleaning Guy</th>
+                    <th>Washing Guy</th>
+                    <th>Complete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in object_list %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ item.carvan.added }}</td>
+                        <td>{{ item.carvan.type }}</td>
+                        <td>{{ item.carvan.model }}</td>
+                        <td>{{ item.carvan.ev_number }}</td>
+                        <td>{{ item.carvan.programme }}</td>
+                        <td>{{ item.carvan.company }}</td>
+                        <td>{{ item.carvan.cleaningguy }} ||
+                            {% if item.cleaning  %}
+                                Done
+                            {% else %}
+                                Pending
+                            {% endif %}
+                        </td>
+                        <td>{{ item.carvan.washingguy }} ||
+                            {% if item.washing  %}
+                                Done
+                            {% else %}
+                                Pending
+                            {% endif %}
+                        </td>
+                        <td>
+                            {% if item.complete  %}
+                                Done
+                            {% else %}
+                                Pending
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+    </div>
+  </div>
+{% endblock content %}
+{% block js %}
+{% endblock js %}
